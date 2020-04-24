@@ -21,13 +21,56 @@ h3{
     justify-content: space-between;
     margin: 10px 180px 0px 120px;
 }
-a{
-    text-decoration: none;
-}
 #buy{
     height: 35px;
 }
 
+
+
+#menu-trigger { /*menu*/
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    top: 90px;
+    right: 160px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px; 
+    border: 1px solid;
+}
+
+
+.menu-trigger div { /*letra menu*/
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+}
+
+
+.menu-hidde { /* fundo do menu escondido*/
+    background: white;
+    position: absolute;
+    right: 160px;
+    top: 150px;
+    border: 1px solid;
+    width: 120px;
+    height: 80px;
+    display: none;
+}
+.menu-hidde li {  /*letras do menu escondido*/
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+    padding: 5.4px;
+}
+.menu-hidde li:hover{
+    background-color: #00c0ee;
+}
+#seta{
+    margin-left: 10px;
+}
 hr {
     border-top: 2px solid #c7c7c7;
     margin-top: 25px;
@@ -101,10 +144,6 @@ div.tam label{
     margin-top: 10px;
 }
 
-img{
-    max-width: 100%;
-    display: block;
-}
 .galeria{
     display: flex;
     flex-wrap: wrap;
@@ -120,26 +159,34 @@ img{
     margin-top: 10px;
     width: 195px;
 }
-#comprar{
-    max-width: 200px;    
-    background-color: black;
-}
-div #txtcomprar{
+
+#btncomprar{
     color: white;
-    padding: 10px;
-    text-align: center;
+    background-color: black;
+    font-size: 14pt;
+    margin-left: 20px;
+    width: 180px;
+    height: 40px;
+    border: 0 none;   
+    cursor: pointer; 
 }
 div.item p{
     text-align: center;
 }
 #carregarMais{
-    background-color: #00c0ee;
-    width: 200px;
-    height: 45px;
+    width: 170px;
+    height: 60px;
     position: absolute;
-    left: 51%;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    left: 50%;
+    margin-top: -90px;
+}
+#txtcarregar{
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: #00c0ee;
 }
 
 .grid{

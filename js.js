@@ -99,18 +99,43 @@ function render(x,y) {
     render(prod7,7) //8
     render(prod8,8) //9
 
-    //dropdown filtro de ordem
-    var veri = 1;
+
+
+
+
+
+
+
+
+
+
+
+
+    var verificadorOrdem = 1;
     var trigger = document.getElementById('menu-trigger').addEventListener("click",function(){
-    var menu = document.getElementById('menu-hidde');
-    if (veri == 1) {
-        menu.style.left = "0px";
-        veri = 0;
-    }else{
-        menu.style.left = "-100%";
-        veri = 1;
-    }
+        var menu = document.getElementById('menu-hidde');
+        if (verificadorOrdem == 1) {
+            menu.style.display = "block";
+            verificadorOrdem = 0;
+        }else{
+            menu.style.display = "none";
+            verificadorOrdem = 1;
+        }
     })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
