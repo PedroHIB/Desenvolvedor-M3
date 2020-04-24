@@ -24,9 +24,6 @@ h3{
 #buy{
     height: 35px;
 }
-
-
-
 #menu-trigger { /*menu*/
     width: 120px;
     height: 40px;
@@ -38,16 +35,12 @@ h3{
     margin-top: 20px; 
     border: 1px solid;
 }
-
-
 .menu-trigger div { /*letra menu*/
     position: absolute;
     top: 10px;
     left: 10px;
     font-size: 14px;
 }
-
-
 .menu-hidde { /* fundo do menu escondido*/
     background: white;
     position: absolute;
