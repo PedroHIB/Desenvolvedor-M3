@@ -54,16 +54,11 @@ hr {
     position: absolute;
     top: 345px;
 }
-.cor li ul li:hover{
-    height: 20px;
-    width: 80px;
-}
 
 .cor input[type=checkbox], .preco input[type=checkbox]{
     display:none; /* Esconde os inputs */
 }
- 
-.cor label, .preco label {
+.cor label, .preco label,#dropOrdenar {
     cursor: pointer;
 }
 .cor input[type="checkbox"] + label:before, .preco input[type="checkbox"] + label:before {
@@ -75,7 +70,6 @@ hr {
     padding:0;
     width: 16px;
 }
- 
 .cor input[type="checkbox"]:checked + label:before, .preco input[type="checkbox"]:checked + label:before {
 
     background: #00c0ee;
@@ -111,18 +105,20 @@ img{
     max-width: 100%;
     display: block;
 }
-.item{
+.galeria{
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
+    font-family: "Open Sans";
+
 }
-a{
-    list-style: none;
-    color: inherit;
-}
-.item > div{
-    flex: 1 1 200px;
+.galeria > div.container{
+    flex: 1 150px;
     margin: 10px;
+}
+#item{
+    margin-top: 10px;
+    width: 195px;
 }
 #comprar{
     max-width: 200px;    
@@ -141,7 +137,7 @@ div.item p{
     width: 200px;
     height: 45px;
     position: absolute;
-    left: 50%;
+    left: 51%;
     margin-top: 40px;
     margin-bottom: 30px;
 }
