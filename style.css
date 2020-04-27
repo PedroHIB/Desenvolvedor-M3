@@ -5,9 +5,9 @@ body, ul, li, p{
     list-style: none;
 }
 h1{
-    position: relative;
-    top: -80px;
-    margin-bottom: -80px;
+    position: absolute;
+    margin-bottom: 80px;
+    margin: 40px 0px 80px 120px;
     font-size: 40px;
     font-weight: inherit;
 }
@@ -61,6 +61,9 @@ h3{
 .menu-hidde li:hover{
     background-color: #00c0ee;
 }
+.respFiltrar{
+    display: none;
+}
 #seta{
     margin-left: 10px;
 }
@@ -68,7 +71,6 @@ hr {
     border-top: 2px solid #c7c7c7;
     margin-top: 25px;
 }
-
 #verCores{
     padding: 10px;
     font-size: 15px;
@@ -89,12 +91,12 @@ hr {
     display: block;
     position: absolute;
     top: 345px;
+    z-index: 1;
 }
-
-.cor input[type=checkbox], .preco input[type=checkbox]{
+.cor input[type=checkbox], .preco input[type=checkbox], .respFiltrar input[type=checkbox]{
     display:none; /* Esconde os inputs */
 }
-.cor label, .preco label,#dropOrdenar {
+.cor label, .preco label,#dropOrdenar,div .tam, .tam label, .respFiltrar, .respFiltrar label{
     cursor: pointer;
 }
 .cor input[type="checkbox"] + label:before, .preco input[type="checkbox"] + label:before {
@@ -140,9 +142,7 @@ div.tam label{
 .galeria{
     display: flex;
     flex-wrap: wrap;
-    max-width: 100%;
     font-family: "Open Sans";
-
 }
 .galeria > div.container{
     flex: 1 150px;
@@ -152,16 +152,16 @@ div.tam label{
     margin-top: 10px;
     width: 195px;
 }
-
 #btncomprar{
     color: white;
     background-color: black;
     font-size: 14pt;
-    margin-left: 20px;
-    width: 180px;
+    width: 200px;
     height: 40px;
     border: 0 none;   
     cursor: pointer; 
+    margin-top: 8px;
+    margin-bottom: 30px;
 }
 div.item p{
     text-align: center;
@@ -177,19 +177,31 @@ div.item p{
     color: white;
     text-align: center;
     padding: 10px;
-    text-decoration: none;
     font-size: 15px;
     background-color: #00c0ee;
 }
-
 .grid{
     display: grid;
     margin: 120px;
     grid-template-columns: 1fr 3fr;
-
 }
 .subgrid{
     margin-top: -50px;
+}
+.btnfiltro{
+    display: flex;
+    margin-top: 40px;
+    margin-right: 60px;
+}
+#btnaplicar{
+    color: white;
+    background-color: #00c0ee;
+    padding: 12px;
+}
+#btnlimpar{
+    border: 1px solid;
+    padding: 12px;
+    margin-left: 30px;
 }
 
 footer{
@@ -203,3 +215,68 @@ div.rodape{
     color: white;
     text-align: center;
 }
+
+/*--responsivo--*/
+
+@media only screen and (max-width: 940px){
+    .header{   
+        margin: 10px 50px 0px 70px;
+    }
+    h1{
+        left: 18%;
+    }
+    .grid{
+        margin: 250px 0px 0px -120px;
+    }
+    .subgrid{
+        display: none;
+    }
+    .galeria{
+        max-width: 600px;
+    }
+    .galeria > div.container{
+        flex: 1 1;
+        margin: 10px;
+    }
+    #carregarMais{
+        align-items: center;
+        margin: 0px 0px 0px -60px;
+        padding-top: 20px;
+    }
+    div#contResp{
+        display: none;
+    }
+    .respFiltrar{
+        position: absolute;
+        top: 180px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+    .respFiltrar li{
+        border: 1px solid;
+        height: 60px;
+        width: 230px;
+    }
+    .respFiltrar li label{
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/*#00c0ee */

@@ -71,7 +71,6 @@ var prod8 = {
     imagem: 10
 }
 
-
 function render(x,y) {
     var { nome, valor,divisao, imagem } = x
 
@@ -99,30 +98,17 @@ function render(x,y) {
     render(prod7,7) //8
     render(prod8,8) //9
 
-
-
-
-
-
-
-
-
-
-
-
-
-    var verificadorOrdem = 1;
-    var trigger = document.getElementById('menu-trigger').addEventListener("click",function(){
-        var menu = document.getElementById('menu-hidde');
-        if (verificadorOrdem == 1) {
-            menu.style.display = "block";
-            verificadorOrdem = 0;
-        }else{
-            menu.style.display = "none";
-            verificadorOrdem = 1;
-        }
-    })
-
+var verificadorOrdem = 1;
+var trigger = document.getElementById('menu-trigger').addEventListener("click",function(){
+var menu = document.getElementById('menu-hidde');
+if (verificadorOrdem == 1) {
+    menu.style.display = "block";
+    verificadorOrdem = 0;
+}else{
+    menu.style.display = "none";
+    verificadorOrdem = 1;
+    }
+})
 
 
 
@@ -138,16 +124,3 @@ function render(x,y) {
 
 
 
-
-/*
-<a href="#">
-<img src="layout/imagens/img_2.png">
-<p>CAMISETA MESCLA</p>
-<p>R$ 28,00</p>
-<p>até 3x de R$9,33</p>
-<p>
-    <div id="comprar">
-        <div id="txtcomprar">Comprar</div>
-    </div>
-</p>
-</a>*/

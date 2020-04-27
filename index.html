@@ -13,12 +13,12 @@
         <img src="layout/imagens/img-buy.png" id="buy">
     </header>
     <hr>
+    <h1>Blusas</h1>
 
  <section class="grid">
     <div>
         <section class="subgrid">
-            <div>
-                <h1>Blusas</h1>                
+            <div>                 
             <div class="menu-trigger" id="menu-trigger">
                 <div>Ordenar por:  <img id='seta' src='/layout/imagens/seta.png'/></div>
             </div>
@@ -29,7 +29,7 @@
                     <li>Maior Preço</li>
                 </ul>
             </nav>
-                <section class="secCores">
+               <section class="secCores">
                     <h3>CORES</h3>  
                     <div class="cor">
                         <ul>
@@ -45,12 +45,16 @@
                                 <label for="laranja">  Laranja</label></li>
                             <li><a href="#" id="verCores">Ver todas as cores<img id='seta' src='/layout/imagens/seta.png'/></a>
                                 <ul>
+                                    <li><input type="checkbox" id="verde" />
+                                        <label for="verde">Verde</label></li>
+                                    <li><input type="checkbox" id="vermelho" />
+                                        <label for="vermelho">Vermelho</label></li>
                                     <li><input type="checkbox" id="preto" />
-                                        <label for="preto">  Preto</label></li>
+                                        <label for="preto">Preto</label></li>
                                     <li><input type="checkbox" id="rosa" />
-                                        <label for="rosa">  Rosa</label></li>
-                                    <li><input type="checkbox" id="marrom" />
-                                        <label for="marrom">  Marrom</label></li>
+                                        <label for="rosa">Rosa</label></li>
+                                    <li><input type="checkbox" id="vinho" />
+                                        <label for="vinho">Vinho</label></li>
                                 </ul>
                             </li>
                         </ul>
@@ -91,6 +95,18 @@
                     </div>
                 </section>
             </div>
+
+            <div class="btnfiltro">
+                <div id="btnaplicar">
+                    <div id="txtaplicar">Aplicar</div>
+                </div>
+                <div id="btnlimpar">
+                    <div id="txtalimpar">Limpar</div>
+                </div>
+            </div>
+   
+
+
         </section>
     </div>
 
@@ -223,6 +239,13 @@
     </div>-->
 
     <section class="galeria">
+        <div class="respFiltrar" id="respFiltrar">
+            <li><input type="checkbox" id="btnfiltrar"/>
+                <label for="btnfiltrar">Filtrar</label></li>
+            <li><input type="checkbox" id="btnord"/>
+                <label for="btnord">Ordenar</label></li>
+        </div>
+    
         <div class="container">
             <div name="imagem" id="imagem"></div>
             <div name="item" id="item"></div>
@@ -253,17 +276,17 @@
             <div name="item" id="item"></div>
             <input type="submit" id="btncomprar" value="Comprar"/>
         </div>
-        <div class="container">
+        <div class="container" id="contResp">
             <div name="imagem" id="imagem"></div>
             <div name="item" id="item"></div>
             <input type="submit" id="btncomprar" value="Comprar"/>
         </div>
-        <div class="container">
+        <div class="container" id="contResp">
             <div name="imagem" id="imagem"></div>
             <div name="item" id="item"></div>
             <input type="submit" id="btncomprar" value="Comprar"/>
         </div>
-        <div class="container"> 
+        <div class="container" id="contResp">
             <div name="imagem" id="imagem"></div>
             <div name="item" id="item"></div>
             <input type="submit" id="btncomprar" value="Comprar"/>
