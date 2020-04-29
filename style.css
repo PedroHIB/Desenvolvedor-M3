@@ -93,8 +93,8 @@ hr {
     top: 345px;
     z-index: 1;
 }
-.cor input[type=checkbox], .preco input[type=checkbox], .respFiltrar input[type=checkbox]{
-    display:none; /* Esconde os inputs */
+input[type=checkbox]{
+    display:none; 
 }
 .cor label, .preco label,#dropOrdenar,div .tam, .tam label, .respFiltrar, .respFiltrar label{
     cursor: pointer;
@@ -109,7 +109,6 @@ hr {
     width: 16px;
 }
 .cor input[type="checkbox"]:checked + label:before, .preco input[type="checkbox"]:checked + label:before {
-
     background: #00c0ee;
 }
  
@@ -125,11 +124,11 @@ div.tam:hover{
     border: 1px solid #00c0ee;
 }
 div.tam label{
-    display: block;
-    position: relative;
+    display: flex;
+    justify-content: center;
     font-size: 12px;
     text-align: center;
-    top: 5px;
+    margin-top: 8px;
 }
 .secTamanhos{
     color: #d9d9d9;
@@ -143,6 +142,7 @@ div.tam label{
     display: flex;
     flex-wrap: wrap;
     font-family: "Open Sans";
+    max-width: 800px;
 }
 .galeria > div.container{
     flex: 1 150px;
@@ -184,6 +184,7 @@ div.item p{
     display: grid;
     margin: 120px;
     grid-template-columns: 1fr 3fr;
+    max-width: 1000px;
 }
 .subgrid{
     margin-top: -50px;

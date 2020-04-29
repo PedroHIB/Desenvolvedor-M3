@@ -114,13 +114,18 @@ if (verificadorOrdem == 1) {
 
 
 
+var verificadorTamanho = 1;
+var tamclick = document.querySelector('.tam').addEventListener("click",function(){
+    var tam = document.querySelector('div.tam');
+    if (verificadorTamanho == 1) {
+        tam.style.color = "#00c0ee";
+        tam.style.border = "1px solid #00c0ee"
+        verificadorTamanho = 0;
+    }else{
+        tam.style.color = "#d9d9d9";
+        tam.style.border = "1px solid #d9d9d9"
+        verificadorTamanho = 1;
+    }
+})
 
-
-
-
-
-
-
-
-
-
+//<div class="tam" id="tamp" onclick="ativarbtn()"><label>P</label></div>
