@@ -114,7 +114,6 @@ if (verificadorOrdem == 1) {
 
 //Menu Responsivo
 let show = true; 
-
 const menuSection = document.querySelector(".menu-section")
 const menuToggle = menuSection.querySelector(".menu-toggle")
 
@@ -125,22 +124,41 @@ menuToggle.addEventListener("click", () => {
     show = !show;
 })
 
-/*<div class="containerx">
-            <div class="menu-section">
-                <div class="menu-toggle">
-                    <div class="one"></div>
-                    <div class="two"></div>
-                    <div class="three"></div>
-                </div>
-            </div>
-          </div>
---------------------------------------------------------------          
-        <div class="respFiltrar" id="respFiltrar">
-            <li><input type="checkbox" id="btnfiltrar"/>
-                <label for="btnfiltrar">Filtrar</label></li>
+let show2 = true
+const menuSection2 = document.querySelector(".menu-section2")
+const menuToggle2 = menuSection2.querySelector(".menu-toggle2")
 
-                
-            <li><input type="checkbox" id="btnord"/>
-                <label for="btnord">Ordenar</label></li>
-        </div>
-        */
+menuToggle2.addEventListener("click", () => {
+    document.body.style.overflow = show2 ? "hidden" : "initial"
+
+    menuSection2.classList.toggle("on", show2)
+    show2 = !show2;
+})
+
+
+const texto = document.querySelector('.menu-toggle')
+var verificar = true
+
+texto.addEventListener('click', function(){
+    if (verificar){
+        document.querySelector('.menu-toggle').innerHTML = "x"
+        verificar = !verificar
+    } else {
+        document.querySelector('.menu-toggle').innerHTML = "Ordenar"
+        verificar = true
+    }
+})
+ 
+const texto2 = document.querySelector('.menu-toggle2')
+var verificar = true
+
+texto2.addEventListener('click', function(){
+    if (verificar){
+        document.querySelector('.menu-toggle2').innerHTML = "x"
+
+        verificar = !verificar
+    } else {
+        document.querySelector('.menu-toggle2').innerHTML = "Filtrar"
+        verificar = true
+    }
+})

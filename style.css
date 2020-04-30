@@ -220,12 +220,10 @@ div.rodape{
     color: white;
     text-align: center;
 }
-.containerx{
+.containerx, .containerx nav, .containerx2, .containerx2 nav{
     display: none;
 }
-.containerx nav{
-    display: none;
-}
+
 /*------------responsivo------------*/
 @media only screen and (max-width: 930px){
     h1{
@@ -239,6 +237,7 @@ div.rodape{
     }
     .galeria{
         max-width: 500px;
+        min-width: 300px;
     }
     .galeria > div.container{
         flex: 1 1;
@@ -252,44 +251,40 @@ div.rodape{
     div#contResp{
         display: none;
     }
-    .respFiltrar{
+   
+
+    .border1{
+        height: 80px;
+        width: 210px;
         position: absolute;
-        top: 180px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        
-    }
-    .respFiltrar li{
+        top: 170px;
+        left: 80px;
+
+        display: block;
         border: 1px solid;
-        height: 60px;
-        width: 230px;
     }
-    .respFiltrar li label{
-        font-size: 30px;
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
+    .border2{
+        height: 80px;
+        width: 200px;
+        position: absolute;
+        top: 170px;
+        left: 291px;
+
+        display: block;
+        border: 1px solid;
     }
-    
     /*--Ordenar--*/
     .containerx{
-  
         display: flex;
-
     }
-    .one,.two,.three {
-        background-color: rgb(0, 0, 0);
-        height: 5px;
-        width: 100%;
-        margin: 6px auto;
 
-        transition-duration: 0.3s;
-    }
     .menu-toggle {
-        width: 40px;
-        height: 30px;
-        margin-right: 20px;
+        position: absolute;
+        top: 190px;
+        left: 140px;
+        font-size: 30px;
+        cursor: pointer;
+        
     }
 
     /* fullscreen */
@@ -301,7 +296,74 @@ div.rodape{
         width: 100vw;
         height: 100vh;
 
-        background-color: #59a4c1;
+        background-color: white ;
+        
+        z-index: 10;
+    }
+    .menu-section.on nav {
+        display: block; 
+        position: absolute;
+        top: 10px;
+        left: 0px;  
+        margin-left: 20px;
+    }
+    .menu-section.on .menu-toggle {
+        margin-top: -170px;
+        z-index: 10;
+        margin-left: 180px;
+        font-family: "Flaticon1", sans-serif;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    hr{
+        width: 100vw;
+        margin-top: 10px;
+        margin-left: -20px !important;
+    }
+    #txtOrdenar{
+        font-size: 40px;
+        color: #666666;
+    }
+    .menu-section.on nav ul {
+        display: block;
+    }
+    .menu-section.on nav ul a{
+        transition-duration: 0.5s;
+        font-size: 26px;
+        line-height: 40px;
+        display: block;
+        text-decoration: none;
+        color: black;
+        margin-bottom: 20px;
+    }
+    .menu-section.on nav ul a:hover{
+        font-size: 28px;
+        width: 200px;
+    }
+
+    /*--Filtrar--*/
+    .containerx2{
+        display: flex;
+    }
+    .menu-toggle2 {
+        position: absolute;
+        top: 190px;
+        left: 360px;
+        font-size: 30px;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    /* fullscreen */
+    .menu-section2.on {
+        position: absolute;
+        top:0;
+        left:0;
+        
+        width: 100vw;
+        height: 100vh;
+
+        background-color: white ;
         
         z-index: 10;
 
@@ -309,34 +371,54 @@ div.rodape{
         justify-content: center;
         align-items: center;
     }
-    .menu-section.on nav {
-        display: block;        
-    }
-    .menu-section.on .menu-toggle {
+    .menu-section2.on nav {
+        display: block; 
         position: absolute;
-        right: 205px;
-        top: 15px;
+        top: 10px;
+        left: 0px;  
+        margin-left: 20px;
     }
-    .menu-section.on .menu-toggle .one {
-        transform: rotate(45deg) translate(7px, 7px);
+    .menu-section2.on .menu-toggle2 {
+        z-index: 10;
+        margin-top: -170px;
+        margin-left: 08px;
+        font-family: "Flaticon1", sans-serif;
+        font-size: 30px;
+        cursor: pointer;
     }
-    .menu-section.on .menu-toggle .two {
-        opacity: 0;
+    hr{
+        width: 100vw;
+        margin-top: 10px;
+        margin-left: -20px !important;
     }
-    .menu-section.on nav ul {
-        text-align: center;
+    #txtFiltrar{
+        font-size: 40px !important;
+        color: #666666;
+    }
+    .menu-section2.on nav ul {
         display: block;
     }
-    .menu-section.on nav ul a{
+    .menu-section2.on nav ul a{
         transition-duration: 0.5s;
-        font-size: 30px;
+        font-size: 26px;
         line-height: 40px;
         display: block;
+        text-decoration: none;
+        color: black;
+        margin-bottom: 20px;
     }
 
+    .menu-section2.on nav ul li{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        max-width: 500px;
+        margin: auto;
+    }
+    .plus{
+        margin-left: 100px;
+    }
 
-
-    /*--Filtrar--*/
 }
 
 

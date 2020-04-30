@@ -18,27 +18,7 @@
 
 
         
-        <div class="containerx">
-             <div class="menu-section">
-              <div class="menu-toggle">
-                <div class="one"></div>
-                <div class="two"></div>
-              </div>
-              <nav>
-                <ul>
-                  <li>
-                    <a href="#">CORES</a>
-                  </li>
-                  <li>
-                    <a href="#">TAMANHO</a>
-                  </li>
-                  <li>
-                    <a href="#">FAIXA DE PREÇO</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
+
 
     </header>
     <hr>
@@ -302,13 +282,55 @@
     </div>-->
 
     <section class="galeria">
-        <div class="respFiltrar" id="respFiltrar">
-            <li><input type="checkbox" id="btnfiltrar"/>
-                <label for="btnfiltrar">Filtrar</label></li>
-            <li><input type="checkbox" id="btnord"/>
-                <label for="btnord">Ordenar</label></li>
-        </div>
-    
+
+        <div class="border1"></div>
+        <div class="border2"></div>
+        <div class="containerx">
+            <div class="menu-section">
+                <div class="menu-toggle" id="ordernarx">Ordenar</div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" id="txtOrdenar">Ordenar</a>
+                    </li>
+                    <hr>
+                  <li>
+                    <a href="#">Mais Recentes</a>
+                  </li>
+                  <li>
+                    <a href="#">Menor Preço</a>
+                  </li>
+                  <li>
+                    <a href="#">Maior preço</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="containerx2">
+            <div class="menu-section2">
+                <div class="menu-toggle2">Filtrar</div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" id="txtFiltrar" onclick="abc()">Filtrar</a>
+                    </li>
+                    <hr>
+                  <li>
+                    <a href="#">CORES</a><a href="#" class="plus">+</a>
+                  </li>
+                  <li>
+                    <a href="#">TAMANHOS</a><a href="#" class="plus">+</a>
+                  </li>
+                  <li>
+                    <a href="#">FAIXA DE PREÇO</a><a href="#" class="plus">+</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>    
+          
         <div class="container">
             <div name="imagem" id="imagem"></div>
             <div name="item" id="item"></div>
