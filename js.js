@@ -112,20 +112,35 @@ if (verificadorOrdem == 1) {
 
 
 
+//Menu Responsivo
+let show = true; 
 
+const menuSection = document.querySelector(".menu-section")
+const menuToggle = menuSection.querySelector(".menu-toggle")
 
-var verificadorTamanho = 1;
-var tamclick = document.querySelector('.tam').addEventListener("click",function(){
-    var tam = document.querySelector('div.tam');
-    if (verificadorTamanho == 1) {
-        tam.style.color = "#00c0ee";
-        tam.style.border = "1px solid #00c0ee"
-        verificadorTamanho = 0;
-    }else{
-        tam.style.color = "#d9d9d9";
-        tam.style.border = "1px solid #d9d9d9"
-        verificadorTamanho = 1;
-    }
+menuToggle.addEventListener("click", () => {
+    document.body.style.overflow = show ? "hidden" : "initial"
+
+    menuSection.classList.toggle("on", show)
+    show = !show;
 })
 
-//<div class="tam" id="tamp" onclick="ativarbtn()"><label>P</label></div>
+/*<div class="containerx">
+            <div class="menu-section">
+                <div class="menu-toggle">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+            </div>
+          </div>
+--------------------------------------------------------------          
+        <div class="respFiltrar" id="respFiltrar">
+            <li><input type="checkbox" id="btnfiltrar"/>
+                <label for="btnfiltrar">Filtrar</label></li>
+
+                
+            <li><input type="checkbox" id="btnord"/>
+                <label for="btnord">Ordenar</label></li>
+        </div>
+        */

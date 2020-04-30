@@ -1,7 +1,7 @@
 body, ul, li, p{
     margin: 0px;
     padding: 0px;
-    border: 0px;
+    border: 0px 0px ;
     list-style: none;
 }
 h1{
@@ -17,9 +17,9 @@ h3{
 }
 .header{   
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     margin: 10px 180px 0px 120px;
+    max-width: 950px;
 }
 #buy{
     height: 35px;
@@ -29,7 +29,7 @@ h3{
     height: 40px;
     position: absolute;
     top: 90px;
-    right: 160px;
+    left: 950px;
     cursor: pointer;
     text-align: center;
     margin-top: 20px; 
@@ -44,7 +44,7 @@ h3{
 .menu-hidde { /* fundo do menu escondido*/
     background: white;
     position: absolute;
-    right: 160px;
+    left: 950px;
     top: 150px;
     border: 1px solid;
     width: 120px;
@@ -77,7 +77,6 @@ hr {
     list-style: none;
     color: inherit;
     text-decoration: underline;
-
 }
 .cor li  ul{
     top:25px; 
@@ -123,12 +122,17 @@ div.tam:hover{
     color: #00c0ee;
     border: 1px solid #00c0ee;
 }
+.secTamanhos input:checked + .tam{
+    color: #00c0ee;
+    border: 1px solid #00c0ee;
+}
 div.tam label{
     display: flex;
     justify-content: center;
+    padding: 8px;
     font-size: 12px;
     text-align: center;
-    margin-top: 8px;
+    margin-top: 0px;;
 }
 .secTamanhos{
     color: #d9d9d9;
@@ -216,13 +220,14 @@ div.rodape{
     color: white;
     text-align: center;
 }
-
-/*--responsivo--*/
-
-@media only screen and (max-width: 940px){
-    .header{   
-        margin: 10px 50px 0px 70px;
-    }
+.containerx{
+    display: none;
+}
+.containerx nav{
+    display: none;
+}
+/*------------responsivo------------*/
+@media only screen and (max-width: 930px){
     h1{
         left: 18%;
     }
@@ -233,7 +238,7 @@ div.rodape{
         display: none;
     }
     .galeria{
-        max-width: 600px;
+        max-width: 500px;
     }
     .galeria > div.container{
         flex: 1 1;
@@ -266,18 +271,76 @@ div.rodape{
         justify-content: center;
         margin-top: 10px;
     }
+    
+    /*--Ordenar--*/
+    .containerx{
+  
+        display: flex;
+
+    }
+    .one,.two,.three {
+        background-color: rgb(0, 0, 0);
+        height: 5px;
+        width: 100%;
+        margin: 6px auto;
+
+        transition-duration: 0.3s;
+    }
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+    }
+
+    /* fullscreen */
+    .menu-section.on {
+        position: absolute;
+        top:0;
+        left:0;
+        
+        width: 100vw;
+        height: 100vh;
+
+        background-color: #59a4c1;
+        
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-section.on nav {
+        display: block;        
+    }
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 205px;
+        top: 15px;
+    }
+    .menu-section.on .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+    .menu-section.on .menu-toggle .two {
+        opacity: 0;
+    }
+    .menu-section.on nav ul {
+        text-align: center;
+        display: block;
+    }
+    .menu-section.on nav ul a{
+        transition-duration: 0.5s;
+        font-size: 30px;
+        line-height: 40px;
+        display: block;
+    }
 
 
 
+    /*--Filtrar--*/
 }
 
 
 
 
-
-
-
-
-
-
 /*#00c0ee */
+/*overflow: hidden; trava o roll   */

@@ -3,14 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Teste Tecnico M3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
+
+
     <header class="header">
         <a href="https://agenciam3.com/">
             <img src="layout/imagens/logo-m3.png">
         </a>
         <img src="layout/imagens/img-buy.png" id="buy">
+    
+
+
+        
+        <div class="containerx">
+             <div class="menu-section">
+              <div class="menu-toggle">
+                <div class="one"></div>
+                <div class="two"></div>
+              </div>
+              <nav>
+                <ul>
+                  <li>
+                    <a href="#">CORES</a>
+                  </li>
+                  <li>
+                    <a href="#">TAMANHO</a>
+                  </li>
+                  <li>
+                    <a href="#">FAIXA DE PREÇO</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
     </header>
     <hr>
     <h1>Blusas</h1>
@@ -18,9 +47,11 @@
  <section class="grid">
     <div>
         <section class="subgrid">
+
             <div>                 
-            <div class="menu-trigger" id="menu-trigger">
-                <div>Ordenar por:  <img id='seta' src='/layout/imagens/seta.png'/></div>
+                <div class="menu-trigger" id="menu-trigger">
+            <div>Ordenar por:  <img id='seta' src='/layout/imagens/seta.png'/>
+                </div>
             </div>
             <nav class="menu-hidde" id="menu-hidde">
                 <ul>
@@ -29,7 +60,7 @@
                     <li>Maior Preço</li>
                 </ul>
             </nav>
-               <section class="secCores">
+                <section class="secCores">
                     <h3>CORES</h3>  
                     <div class="cor">
                         <ul>
@@ -61,21 +92,53 @@
                     </div>
                 </section>
             </div>
+            <!--------------------------------------------------------------------------------->
             <div>
                 <h3>TAMANHOS</h3> 
                 <section class="secTamanhos">
-                    <div class="tam" id="tamp" onclick="x()"><label>P</label></div>
-                    <div class="tam" id="tamm" onclick="x()"><label>M</label></div>
-                    <div class="tam" id="tamg"><label>G</label></div>
-                    <div class="tam" id="tamgg"><label>GG</label></div>
-                    <div class="tam" id="tam36"><label>36</label></div>
-                    <div class="tam" id="tam38"><label>38</label></div>
-                    <div class="tam" id="tam40"><label>40</label></div>
-                    <div class="tam" id="tam42"><label>42</label></div>
-                    <div class="tam" id="tam44"><label>44</label></div>
-                    <div class="tam" id="tam46"><label>46</label></div>
+                    <input type="checkbox" id="tamp">
+                    <div class="tam">
+                        <label for="tamp">P</label>
+                    </div>
+                    <input type="checkbox" id="tamm">
+                    <div class="tam">
+                        <label for="tamm">M</label>
+                    </div>
+                    <input type="checkbox" id="tamg">
+                    <div class="tam">
+                        <label for="tamg">G</label>
+                    </div>
+                    <input type="checkbox" id="tamgg">
+                    <div class="tam">
+                        <label for="tamgg">GG</label>
+                    </div>
+                    <input type="checkbox" id="tam36">
+                    <div class="tam">
+                        <label for="tam36">36</label>
+                    </div>
+                    <input type="checkbox" id="tam38">
+                    <div class="tam">
+                        <label for="tam38">38</label>
+                    </div>
+                    <input type="checkbox" id="tam40">
+                    <div class="tam">
+                        <label for="tam40">40</label>
+                    </div>
+                    <input type="checkbox" id="tam42">
+                    <div class="tam">
+                        <label for="tam42">42</label>
+                    </div>
+                   <input type="checkbox" id="tam44">
+                    <div class="tam">
+                        <label for="tam44">44</label>
+                    </div>
+                    <input type="checkbox" id="tam46">
+                    <div class="tam">
+                        <label for="tam46">46</label>
+                    </div>
                 </section>
             </div>
+            <!--------------------------------------------------------------------------------->
             <div>
                 <section class="secprecos">
                     <h3>FAIXA DE PREÇO</h3>
@@ -299,9 +362,6 @@
 <div id="carregarMais">
     <div id="txtcarregar">CARREGAR MAIS</div>
 </div>
-
-
-
 <footer>
     <div class="rodape"><p>Agência M3 - Agência de Performance Digital</p></div>
 </footer>
