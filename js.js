@@ -142,9 +142,11 @@ var verificar = true
 texto.addEventListener('click', function(){
     if (verificar){
         document.querySelector('.menu-toggle').innerHTML = "x"
+        document.querySelector('.menu-toggle').style.border = "none"
         verificar = !verificar
     } else {
         document.querySelector('.menu-toggle').innerHTML = "Ordenar"
+        document.querySelector('.menu-toggle').style.border = "1px solid"
         verificar = true
     }
 })
@@ -154,11 +156,14 @@ var verificar = true
 
 texto2.addEventListener('click', function(){
     if (verificar){
+        var bordar = document.querySelector('.menu-toggle2').style.border
         document.querySelector('.menu-toggle2').innerHTML = "x"
+        document.querySelector('.menu-toggle2').style.border = "none"
 
         verificar = !verificar
     } else {
         document.querySelector('.menu-toggle2').innerHTML = "Filtrar"
+        document.querySelector('.menu-toggle2').style.border = "1px solid"
         verificar = true
     }
 })

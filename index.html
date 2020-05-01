@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Teste Tecnico M3</title>
@@ -282,10 +282,7 @@
     </div>-->
 
     <section class="galeria">
-
-        <div class="border1"></div>
-        <div class="border2"></div>
-        <div class="containerx">
+        <div class="containerx"> <!--botao de ordenar-->
             <div class="menu-section">
                 <div class="menu-toggle" id="ordernarx">Ordenar</div>
             <nav>
@@ -307,24 +304,35 @@
               </nav>
             </div>
           </div>
-
           <div class="containerx2">
-            <div class="menu-section2">
+            <div class="menu-section2 on">
                 <div class="menu-toggle2">Filtrar</div>
             <nav>
                 <ul>
                     <li>
-                        <a href="#" id="txtFiltrar" onclick="abc()">Filtrar</a>
+                        <a href="#" id="txtFiltrar">Filtrar</a>
                     </li>
                     <hr>
                   <li>
-                    <a href="#">CORES</a><a href="#" class="plus">+</a>
+                    <input id='plusCor' type="checkbox">                  
+                    <a href="#">CORES</a>
+                    <label for="plusCor">
+                        <span class="menux"></span>
+                    </label>
                   </li>
                   <li>
-                    <a href="#">TAMANHOS</a><a href="#" class="plus">+</a>
+                    <input id='plusTam' type="checkbox">                  
+                    <a href="#">TAMANHOS</a>
+                    <label for="plusTam">
+                        <span class="menux"></span>
+                    </label>
                   </li>
                   <li>
-                    <a href="#">FAIXA DE PREÇO</a><a href="#" class="plus">+</a>
+                    <input id='plusPre' type="checkbox">                  
+                    <a href="#">FAIXA DE PREÇOS</a>
+                    <label for="plusPre">
+                        <span class="menux"></span>
+                    </label>
                   </li>
                 </ul>
               </nav>
