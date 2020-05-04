@@ -29,10 +29,8 @@ h3{
     height: 40px;
     position: absolute;
     top: 90px;
-    left: 950px;
+    left: 887px;
     cursor: pointer;
-    text-align: center;
-    margin-top:100%; 
     border: 1px solid;
 }
 .menu-trigger div { /*letra menu*/
@@ -44,8 +42,8 @@ h3{
 .menu-hidde { /* fundo do menu escondido*/
     background: white;
     position: absolute;
-    left: 950px;
-    top: 150px;
+    left: 887px;
+    top: 131px;
     border: 1px solid;
     width: 120px;
     height: 80px;
@@ -84,7 +82,7 @@ hr {
     margin-left: 10px;
     background-color:#fff; 
     display:none;
-    padding: 10px;
+    padding: 0px;
 }   
 .cor li:hover ul{
     display: block;
@@ -332,7 +330,6 @@ div.rodape{
         font-size: 28px;
         width: 200px;
     }
-
     /*--Filtrar--*/
     .containerx2{
         display: flex;
@@ -373,7 +370,7 @@ div.rodape{
         margin-left: 20px;
     }
     .menu-section2.on .menu-toggle2 {
-        z-index: 10;
+        z-index: 2;
         margin-top: -170px;
         right: 08px;
         font-family: "Flaticon1", sans-serif;
@@ -404,7 +401,6 @@ div.rodape{
         color: black;
         margin-bottom: 20px;
     }
-
     .menu-section2.on nav ul li{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -424,6 +420,7 @@ div.rodape{
         height: 100%;
         transition: .5s ease-in-out;
         left: 15px;
+        z-index: 3;
     }
     .menux::before{
         content: '';
@@ -436,30 +433,86 @@ div.rodape{
         top: 15px;
         left: -15px;
     }
+    .subgrid{ 
+        display: block; 
+        position: absolute;
+        top: 100px;
+        left: 50px;
+        z-index: 11;
+    }
+    .subgrid .secTamanhos, .subgrid .secprecos,.subgrid .secCores,.btnfiltro, h3,.secCores .cor ul li a{
+        display: none;
+    }
     #plusCor:checked ~ label .menux{
         transform: rotate(90deg);
     }
     #plusCor:checked ~ label .menux::before{
         transform: rotate(90deg);
     }
-  
+    #plusCor:checked ~ #corSpace{
+        height: 200px;
+    }   
+    .secCores{
+        margin-top: 85px;
+    }
+    .cor li ul{
+        display: block;
+        position: absolute;
+        top: 179px;
+        left: -10px;
+    }
+    .cor li:hover ul{
+        top: 179px;
+    }
+
     #plusTam:checked ~ label .menux{
         transform: rotate(90deg);
     }
     #plusTam:checked ~ label .menux::before{
         transform: rotate(90deg);
     }
+    #plusTam:checked ~ label .menux{
+        transform: rotate(90deg);
+    }
+    #plusTam:checked ~ #tamSpace{
+        height: 200px;
+    }
+    .subgrid .secTamanhos{
+        margin-top: 180px;
+    }
+
     #plusPre:checked ~ label .menux{
         transform: rotate(90deg);
     }
     #plusPre:checked ~ label .menux::before{
         transform: rotate(90deg);
     }
-    
-
-
-    
+    #plusPre:checked ~ #preSpace{
+        height: 200px;
+    }
+    .secTamanhos{
+        margin-top: 270px;
+    }
+    .menu-trigger{
+        display: none;
+    }
+    .secprecos{
+        margin-top: 270px;
+    }
 }
 
+/*
+coisas a fazer:
+-screen acima de 930px perde: secCores, secTamanhos, secprecos
+-filtro quando abre e depois sai e volta ele fica em branco
+-botoes responsivo>filtro
+
+
+
+
+
+
+
+*/
 /*#00c0ee */
 /*overflow: hidden; trava o roll   */

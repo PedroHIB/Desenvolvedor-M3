@@ -27,7 +27,6 @@
  <section class="grid">
     <div>
         <section class="subgrid">
-
             <div>                 
                 <div class="menu-trigger" id="menu-trigger">
             <div>Ordenar por:  <img id='seta' src='/layout/imagens/seta.png'/>
@@ -138,7 +137,6 @@
                     </div>
                 </section>
             </div>
-
             <div class="btnfiltro">
                 <div id="btnaplicar">
                     <div id="txtaplicar">Aplicar</div>
@@ -305,7 +303,7 @@
             </div>
           </div>
           <div class="containerx2">
-            <div class="menu-section2 on">
+            <div class="menu-section2">
                 <div class="menu-toggle2">Filtrar</div>
             <nav>
                 <ul>
@@ -319,13 +317,17 @@
                     <label for="plusCor">
                         <span class="menux"></span>
                     </label>
+                    <label id="corSpace"></label>
                   </li>
-                  <li>
+
+                  <nav class="baseCor"></nav>
+                 <li>
                     <input id='plusTam' type="checkbox">                  
                     <a href="#">TAMANHOS</a>
                     <label for="plusTam">
                         <span class="menux"></span>
                     </label>
+                    <label id="tamSpace"></label>
                   </li>
                   <li>
                     <input id='plusPre' type="checkbox">                  
@@ -333,6 +335,7 @@
                     <label for="plusPre">
                         <span class="menux"></span>
                     </label>
+                    <label id="preSpace"></label>
                   </li>
                 </ul>
               </nav>
