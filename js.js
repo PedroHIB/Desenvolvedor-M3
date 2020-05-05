@@ -113,16 +113,17 @@ if (verificadorOrdem == 1) {
 
 
 //Menu Responsivo
+const btnfil = document.querySelector(".btnfiltro")
+
+
 var show = true; 
 const menuSection = document.querySelector(".menu-section")
 const menuToggle = menuSection.querySelector(".menu-toggle")
 menuToggle.addEventListener("click", () => {
     document.body.style.overflow = show ? "hidden" : "initial"
-
     menuSection.classList.toggle("on", show)
     show = !show;
 })
-
 var show2 = true
 const menuSection2 = document.querySelector(".menu-section2")
 const menuToggle2 = menuSection2.querySelector(".menu-toggle2")
@@ -153,27 +154,24 @@ texto2.addEventListener('click', function(){
     if (verificar){
         texto2.innerHTML = "x"
         texto2.style.border = "none"
+        if(!verifiCores)
+            secCores.style.display = "block"
+        if(!verifitam)
+            sectam.style.display = "grid"
+        if(!verifiPre)
+            secPre.style.display = "block"
         verificar = !verificar
     } else {
         texto2.innerHTML = "Filtrar"
         texto2.style.border = "1px solid"
-        /**/
+
         sectam.style.display = "none"
         secCores.style.display = "none"
         secPre.style.display = "none"
-        /**/
+
         verificar = true
     }
 })
-
-
-
-
-
-
-
-
-
 
 
 const secCores = document.querySelector('.secCores')
@@ -192,11 +190,11 @@ var verifitam = true
 document.querySelector('#plusTam').addEventListener("click", function(){
     if(verifitam){
         sectam.style.display = "grid"
-        secPre.style.marginTop = "150px" /*aberto */
+        secPre.style.marginTop = "150px" 
         verifitam = !verifitam
     }else{
         sectam.style.display = "none"
-        secPre.style.marginTop = "270px" /*fechado */
+        secPre.style.marginTop = "270px" 
         verifitam = true
     }
 })
@@ -211,4 +209,3 @@ document.querySelector('#plusPre').addEventListener("click", function(){
         verifiPre = true
     }
 })
-
