@@ -1,4 +1,4 @@
-var prod0 = [{
+var prod = [{
     nome: 'CAMISETA MESCLA',
     valor: 28.00,
     divisao:3,
@@ -63,36 +63,38 @@ var prod0 = [{
     imagem: 10
 }]
 
-for (var i=0; i < prod0.length; i++){
-    var divtxt = document.getElementsByName('item')[i]
-    var divImg = document.getElementsByName('imagem')[i]
 
-    var img = document.createElement("img")
-    divtxt.style.textAlign = 'center'
-    
-    divImg.appendChild(img);
-    divImg = img.setAttribute('src',`layout/imagens/img_${prod0[i].imagem}.png`)
 
-    var real = prod0[i].valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+window.onload = render;
+function render(){
+    for (var i=0; i < prod.length; i++){
+        var divtxt = document.getElementsByName('item')[i]
+        var divImg = document.getElementsByName('imagem')[i]
+
+        var img = document.createElement("img")
+        divtxt.style.textAlign = 'center'
     
-    var txt = `${prod0[i].nome}<p style="margin-top:5PX"> <b>${real}</b></p> <p style="margin-bottom:5PX">até ${prod0[i].divisao}x de R$ ${(prod0[i].valor / prod0[i].divisao).toFixed(2)}</p>`
-    divtxt.innerHTML = txt
+        divImg.appendChild(img);
+        divImg = img.setAttribute('src',`layout/imagens/img_${prod[i].imagem}.png`)
+
+        var real = prod[i].valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+    
+        var txt = `${prod[i].nome}<p style="margin-top:5PX"> <b>${real}</b></p> <p style="margin-bottom:5PX">até ${prod[i].divisao}x de R$ ${(prod[i].valor / prod[i].divisao).toFixed(2)}</p>`
+        divtxt.innerHTML = txt
+    }
 }
 
 
-
-
-
 /*filtros Ordem*/
-
-var ordem = 0
-
+/*
+var result = []
 $( ".filRecentes" ).click(function() {
-    ordem = 0
+    reder()
 })
+
 $( ".filMenorV" ).click(function() {
-    ordem = 1
+
 })
 $( ".filMaiorV" ).click(function() {
-    ordem = 2 
-})
+    
+})*/
