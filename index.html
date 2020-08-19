@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>Teste Tecnico M3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsivo.css" />
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 <body>
 
@@ -14,12 +17,6 @@
             <img src="layout/imagens/logo-m3.png">
         </a>
         <img src="layout/imagens/img-buy.png" id="buy">
-    
-
-
-        
-
-
     </header>
     <hr>
     <h1>Blusas</h1>
@@ -34,9 +31,9 @@
             </div>
             <nav class="menu-hidde" id="menu-hidde">
                 <ul>
-                    <li>Mais recentes</li>
-                    <li>Menor Preço</li>
-                    <li>Maior Preço</li>
+                    <a class="filRecentes"><li>Mais Recentes</li></a>
+                    <a class="filMenorV"><li>Menor Preço</li></a>
+                    <a class="filMaiorV"><li>Maior Preço</li></a>
                 </ul>
             </nav>
                 <section class="secCores">
@@ -145,140 +142,8 @@
                     <div id="txtalimpar">Limpar</div>
                 </div>
             </div>
-   
-
-
         </section>
     </div>
-
-    <!--galeria feita toda em html e css-->
-    <!--<div> 
-        <section class="item">
-            <div>
-                <a href="#">
-                    <img src="layout/imagens/img_2.png">
-                    <p>CAMISETA MESCLA</p>
-                    <p>R$ 28,00</p>
-                    <p>até 3x de R$9,33</p>
-                    <p>
-                        <div id="comprar" onclick="btncomprar()">
-                            <div id="txtcomprar">Comprar</div>
-                        </div>
-                    </p>
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    <img src="layout/imagens/img_3.png">
-                    <p>CAMISETA MESCLA</p>
-                    <p>R$ 28,00</p>
-                    <p>até 3x de R$9,33</p>
-                    <p>
-                        <div id="comprar" onclick="btncomprar()">
-                            <div id="txtcomprar">Comprar</div>
-                        </div>
-                    </p>
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    <img src="layout/imagens/img_4.png">
-                    <p>CAMISETA MESCLA</p>
-                    <p>R$ 28,00</p>
-                    <p>até 3x de R$9,33</p>
-                    <p>
-                        <div id="comprar" onclick="btncomprar()">
-                            <div id="txtcomprar">Comprar</div>
-                        </div>
-                    </p>
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    <img src="layout/imagens/img_5.png">
-                    <p>CAMISETA MESCLA</p>
-                    <p>R$ 28,00</p>
-                    <p>até 3x de R$9,33</p>
-                    <p>
-                        <div id="comprar" onclick="btncomprar()">
-                            <div id="txtcomprar">Comprar</div>
-                        </div>
-                    </p>
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    <img src="layout/imagens/img_6.png">
-                    <p>CAMISETA MESCLA</p>
-                    <p>R$ 28,00</p>
-                    <p>até 3x de R$9,33</p>
-                    <p>
-                        <div id="comprar" onclick="btncomprar()">
-                            <div id="txtcomprar">Comprar</div>
-                        </div>
-                    </p>
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    <img src="layout/imagens/img_7.png">
-                    <p>CAMISETA MESCLA</p>
-                    <p>R$ 28,00</p>
-                    <p>até 3x de R$9,33</p>
-                    <p>
-                        <div id="comprar" onclick="btncomprar()">
-                            <div id="txtcomprar">Comprar</div>
-                        </div>
-                    </p>
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    <img src="layout/imagens/img_8.png">
-                    <p>CAMISETA MESCLA</p>
-                    <p>R$ 28,00</p>
-                    <p>até 3x de R$9,33</p>
-                    <p>
-                        <div id="comprar" onclick="btncomprar()">
-                            <div id="txtcomprar">Comprar</div>
-                        </div>
-                    </p>
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    <img src="layout/imagens/img_9.png">
-                    <p>CAMISETA MESCLA</p>
-                    <p>R$ 28,00</p>
-                    <p>até 3x de R$9,33</p>
-                    <p>
-                        <div id="comprar" onclick="btncomprar()">
-                            <div id="txtcomprar">Comprar</div>
-                        </div>
-                    </p>
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    <img src="layout/imagens/img_10.png">
-                    <p>CAMISETA MESCLA</p>
-                    <p>R$ 28,00</p>
-                    <p>até 3x de R$9,33</p>
-                    <p>
-                        <div id="comprar" onclick="btncomprar()">
-                            <div id="txtcomprar">Comprar</div>
-                        </div>
-                    </p>
-                </a>
-            </div>
-        </section>
-        <a href="#">
-            <div id="carregarMais">
-                <div id="txtcomprar">CARREGAR MAIS</div>
-            </div>
-        </a>
-    </div>-->
-
     <section class="galeria">
         <div class="containerx"> <!--botao de ordenar-->
             <div class="menu-section">
@@ -399,7 +264,9 @@
     <div class="rodape"><p>Agência M3 - Agência de Performance Digital</p></div>
 </footer>
 
-<script type="text/javascript" src="js.js"></script>
+<script type="text/javascript" src="js/produtos.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="js/filtrosOrdem.js"></script>
 
 </body>
 </html>

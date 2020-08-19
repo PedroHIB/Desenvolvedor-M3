@@ -1,0 +1,223 @@
+body, ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    border: 0px 0px ;
+    list-style: none;
+}
+h1{
+    position: absolute;
+    margin-bottom: 80px;
+    margin: 40px 0px 80px 120px;
+    font-size: 40px;
+    font-weight: inherit;
+}
+h3{
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.header{   
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 180px 0px 120px;
+    max-width: 950px;
+}
+#buy{
+    height: 35px;
+}
+#menu-trigger { /*menu*/
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    top: 90px;
+    left: 887px;
+    cursor: pointer;
+    border: 1px solid;
+}
+.menu-trigger div { /*letra menu*/
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+}
+.menu-hidde { /* fundo do menu escondido*/
+    background: white;
+    position: absolute;
+    left: 887px;
+    top: 131px;
+    border: 1px solid;
+    width: 120px;
+    height: 80px;
+    display: none;
+}
+.menu-hidde li {  /*letras do menu escondido*/
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+    padding: 5.4px;
+}
+.menu-hidde li:hover{
+    background-color: #00c0ee;
+}
+.respFiltrar{
+    display: none;
+}
+#seta{
+    margin-left: 10px;
+}
+hr {
+    border-top: 2px solid #c7c7c7;
+    margin-top: 25px;
+}
+#verCores{
+    padding: 10px;
+    font-size: 15px;
+    list-style: none;
+    color: inherit;
+    text-decoration: underline;
+}
+.cor li  ul{
+    top:25px; 
+    width: 100px;
+    margin-left: 10px;
+    background-color:#fff; 
+    display:none;
+    padding: 0px;
+}   
+.cor li:hover ul{
+    display: block;
+    position: absolute;
+    top: 345px;
+    z-index: 1;
+}
+input[type=checkbox]{
+    display:none; 
+}
+.cor label, .preco label,#dropOrdenar,div .tam, .tam label, .respFiltrar, .respFiltrar label{
+    cursor: pointer;
+}
+.cor input[type="checkbox"] + label::before, .preco input[type="checkbox"] + label::before {
+    border: 1px solid #00c0ee;
+    content: "\00a0";
+    display: inline-block;
+    height: 12px;
+    margin: 0 .25em 0 0;
+    padding:0;
+    width: 16px;
+ }
+.cor input[type="checkbox"]:checked + label::before, .preco input[type="checkbox"]:checked + label::before {
+    background: #00c0ee;
+}
+ 
+div.tam {
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    margin: 5px 5px;    
+    border: 1px solid;
+}
+div.tam:hover{
+    color: #00c0ee;
+    border: 1px solid #00c0ee;
+}
+.secTamanhos input:checked + .tam{
+    color: #00c0ee;
+    border: 1px solid #00c0ee;
+}
+div.tam label{
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 0px;;
+}
+.secTamanhos{
+    color: #d9d9d9;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 140px;
+    margin-top: 10px;
+}
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Open Sans";
+    max-width: 800px;
+}
+.galeria > div.container{
+    flex: 1 150px;
+    margin: 10px;
+}
+#item{
+    margin-top: 10px;
+    width: 195px;
+}
+#btncomprar{
+    color: white;
+    background-color: black;
+    font-size: 14pt;
+    width: 200px;
+    height: 40px;
+    border: 0 none;   
+    cursor: pointer; 
+    margin-top: 8px;
+    margin-bottom: 30px;
+}
+div.item p{
+    text-align: center;
+}
+#carregarMais{
+    width: 170px;
+    height: 60px;
+    position: absolute;
+    margin-top: -90px;
+    margin-left: 650px;
+}
+#txtcarregar{
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    background-color: #00c0ee;
+}
+.grid{
+    display: grid;
+    margin: 120px;
+    grid-template-columns: 1fr 3fr;
+    max-width: 1000px;
+}
+.subgrid{
+    margin-top: -50px;
+}
+.btnfiltro{
+    display: flex;
+    margin-top: 40px;
+    margin-right: 60px;
+}
+#btnaplicar{
+    color: white;
+    background-color: #00c0ee;
+    padding: 12px;
+}
+#btnlimpar{
+    border: 1px solid;
+    padding: 12px;
+    margin-left: 30px;
+}
+
+footer{
+    height: 40px;
+    width: 100%;
+    margin-top: 80px;
+    background-color: black;
+}
+div.rodape{
+    padding-top: 10px;
+    color: white;
+    text-align: center;
+}
+.containerx, .containerx nav, .containerx2, .containerx2 nav{
+    display: none;
+}
