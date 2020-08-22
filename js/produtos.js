@@ -1,100 +1,89 @@
-var prod = [{
-    nome: 'CAMISETA MESCLA',
-    valor: 28.00,
-    divisao:3,
-    cores: ['cinza'],
-    tamanhos: ['p', 'm', 'g'],
-    imagem: 2
-},{
-    nome: 'SAIA EM COURO',
-    valor: 398.00,
-    divisao: 5,
-    cores: ['preto', 'marrom'],
-    tamanhos: ['p', 'm', 'g'],
-    imagem: 3
-},{
-    nome: 'CARDIGAN TIGRE',
-    valor: 398.00,
-    divisao: 5,
-    cores: ['preto', 'marrom'],
-    tamanhos: ['p', 'm', 'g'],
-    imagem: 4
-},{
-    nome: 'CARDIGAN OFF WHITE',
-    valor: 99.90,
-    divisao: 3,
-    cores: ['branco', 'rosa'],
-    tamanhos: ['p', 'm', 'g'],
-    imagem: 5
-},{
-    nome: 'BODY LEOPARDO',
-    valor: 129.90,
-    divisao: 3,
-    cores: ['preto', 'marrom'],
-    tamanhos: ['GG', '36', '44'],
-    imagem: 6
-},{
-    nome: 'CASACO PELOS',
-    valor: 398.00,
-    divisao: 5,
-    cores: ['rosa', 'roxo'],
-    tamanhos: ['36', '38', '40','42', '44','46'],
-    imagem: 7
-},{
-    nome: 'CROPPED STRIPES',
-    valor: 120.00,
-    divisao: 3,
-    cores: ['azul', 'amarelo', 'laranja'],
-    tamanhos: ['p', 'm', 'g','36','38','40'],
-    imagem: 8
-},{
-    nome: 'CAMISA TRANSPARENTE',
-    valor: 398.00,
-    divisao: 5,
-    cores: ['preto','branco'],
-    tamanhos: ['p', 'm', 'g','36','38','40'],
-    imagem: 9
-},{
-    nome: 'PONCHETE CLUTCH',
-    valor: 99.00,
-    divisao: 3,
-    cores: ['preto'],
-    tamanhos: ['p', 'm', 'g','gg','36','38','40','42','44','46'],
-    imagem: 10
-}]
-
-
-
-window.onload = render;
-function render(){
-    for (var i=0; i < prod.length; i++){
-        var divtxt = document.getElementsByName('item')[i]
-        var divImg = document.getElementsByName('imagem')[i]
-
-        var img = document.createElement("img")
-        divtxt.style.textAlign = 'center'
+(async () => {
+    let products = await fetch('/js/data.json').then(res => res.json()).then(data => data);
     
-        divImg.appendChild(img);
-        divImg = img.setAttribute('src',`layout/imagens/img_${prod[i].imagem}.png`)
+    const galery = document.querySelector('.galeria');
 
-        var real = prod[i].valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-    
-        var txt = `${prod[i].nome}<p style="margin-top:5PX"> <b>${real}</b></p> <p style="margin-bottom:5PX">até ${prod[i].divisao}x de R$ ${(prod[i].valor / prod[i].divisao).toFixed(2)}</p>`
-        divtxt.innerHTML = txt
+    function clear(){
+        galery.innerHTML = ""
     }
-}
+    function render(x) {
+        x.forEach((product) => {
+            const productContainer = document.createElement('div');
+            productContainer.classList.add('container');
+
+            const real = product.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+
+            productContainer.innerHTML = `
+            <div name="imagem" id="imagem">
+                <img src="layout/imagens/img_${product.imagem}.png" />
+            </div>
+            <div class="item" name="item" id="item" style="text-aling: center;">
+                <p style="text-align-center">
+                    ${product.nome}
+                </p>
+                <p style="margin-top:5PX">
+                    <b>${real}</b>
+                </p> 
+                <p style="margin-bottom:5PX">
+                    até ${product.divisao}x de R$ ${(product.valor / product.divisao).toFixed(2)}
+                </p>
+            </div>
+            <input type="submit" id="btncomprar" value="Comprar" style="text-align: center;"/>`
+
+            galery.appendChild(productContainer);
+        });
+        productContainer = ''
+    };
+    render(products);
+
+    /*filtros Ordem*/
+    let result
+    $( ".filRecentes" ).click(function() {
+        location.reload()
+    })
+    $( ".filMenorV" ).click(function() {
+        result = products.sort(function(a, b) {
+            return a.valor - b.valor;
+        });
+        clear()
+        render(result)  
+    })
+    $( ".filMaiorV" ).click(function() {
+        result = products.sort(function(a, b) {
+            return b.valor - a.valor;
+        });    
+     
+        clear()
+        render(result)  
+    })
 
 
-/*filtros Ordem*/
-/*
-var result = []
-$( ".filRecentes" ).click(function() {
-    reder()
-})
+    /*Filtro de Cores */
+    $( "#amarelo" ).click(function() {
+        /*var filcor = [];
+        
+        products.forEach((filcor) => {
+            if(products.cores == "amarelo") {
+                filcor.push(products)
+            }
+        })
+        clear()
+        render(filcor) 
+        console.log(filcor)*/
 
-$( ".filMenorV" ).click(function() {
+        /*products.forEach(function(el){
+            if(el.cores === "amarelo") {
+                alert ("achou!")
+            }
+        });*/
 
-})
-$( ".filMaiorV" ).click(function() {
-    
-})*/
+        let re = []
+        products.filters(function(a) {
+            return re.push(a.cores == "Amarelo");
+        });
+        
+        console.log(re)
+        clear()
+        render(re) 
+    })
+})();
