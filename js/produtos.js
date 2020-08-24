@@ -59,146 +59,72 @@
 
 
     /*Filtro de Cores */
-    $( "#amarelo" ).click(function() { 
-        let filtroAmarelo = []  
+    var filtroCores = []
+    var cor
+    function acrescentarCor(cor){
         for (var i = 0; i < 9; i++){
             for (var j = 0; j < 3; j++){
-                if (products[i].cores[j] == 'amarelo'){
-                    filtroAmarelo.push(products[i])
+                if (products[i].cores[j] == cor){
+                    filtroCores.push(products[i])
+                    filtroCores = filtroCores.filter(function (a) {
+                        return !this[JSON.stringify(a)] && (this[JSON.stringify(a)] = true);
+                    },
+                    Object.create(null))
+
+                    console.log(filtroCores)
                 }
             }
         }
-        
-        clear()
-        render(filtroAmarelo)
-    })
-    $( "#azul" ).click(function() {  
-        let filtroAzul = []         
+    }
+    $(document).ready(function(){
+        $(".cor").find("input[type='checkbox']").click(function(){
+           cor = $(this).attr("id");
+           acrescentarCor(cor)
+
+           if (document.querySelector(`#${cor}`).checked) {
+            
+            clear()
+            render(filtroCores)
+        } else {
+            clear()
+            render(products)
+        }
+        });
+    });
+
+
+
+    /*Filtro de Tamanhos */
+    var filtroTamanho = []
+    var tamanho
+    function acrescentarTamanho(tam){
         for (var i = 0; i < 9; i++){
-            for (var j = 0; j < 3; j++){
-                if (products[i].cores[j] == 'azul'){
-                    filtroAzul.push(products[i])
+            for (var j = 0; j < 10; j++){
+                if (products[i].tamanhos[j] == tam){
+                    filtroTamanho.push(products[i])
+                    filtroTamanho = filtroTamanho.filter(function (a) {
+                        return !this[JSON.stringify(a)] && (this[JSON.stringify(a)] = true);
+                    },
+                    Object.create(null))
+
+                    console.log(filtroTamanho)
                 }
             }
         }
-        
-        clear()
-        render(filtroAzul)
-    })
-    $( "#branco" ).click(function() { 
-        let filtroBranco = [] 
-        for (var i = 0; i < 9; i++){
-            for (var j = 0; j < 3; j++){
-                if (products[i].cores[j] == 'branco'){
-                    filtroBranco.push(products[i])
-                }
+    }
+    $(document).ready(function(){
+        $(".secTamanhos").find("input[type='checkbox']").click(function(){
+           tamanho = $(this).attr("name");
+           acrescentarTamanho(tamanho)
+            console.log(tamanho)
+            if (document.querySelector(`#tam${tamanho}`).checked) {
+                clear()
+                render(filtroTamanho)
+            } else {
+                clear()
+                render(products)
             }
-        }        
-        clear()
-        render(filtroBranco)
-    })
-    $( "#cinza" ).click(function() { 
-        let filtroCinza = [] 
-        for (var i = 0; i < 9; i++){
-            for (var j = 0; j < 3; j++){
-                if (products[i].cores[j] == 'cinza'){
-                    filtroCinza.push(products[i])
-                }
-            }
-        }
-        
-        clear()
-        render(filtroCinza)
-    })
-    $( "#laranja" ).click(function() {  
-        let filtroLaranja = []  
-        for (var i = 0; i < 9; i++){
-            for (var j = 0; j < 3; j++){
-                if (products[i].cores[j] == 'laranja'){
-                    filtroLaranja.push(products[i])
-                }
-            }
-        }
-        
-        clear()
-        render(filtroLaranja)
-    })
-    $( "#laranja" ).click(function() {  
-        let filtroLaranja = []  
-        for (var i = 0; i < 9; i++){
-            for (var j = 0; j < 3; j++){
-                if (products[i].cores[j] == 'laranja'){
-                    filtroLaranja.push(products[i])
-                }
-            }
-        }
-        
-        clear()
-        render(filtroLaranja)
-    })
-    $( "#verde" ).click(function() {  
-        let filtroverde = []  
-        for (var i = 0; i < 9; i++){
-            for (var j = 0; j < 3; j++){
-                if (products[i].cores[j] == 'verde'){
-                    filtroverde.push(products[i])
-                }
-            }
-        }
-        
-        clear()
-        render(filtroverde)
-    })
-    $( "#vermelho" ).click(function() {  
-        let filtrovermelho = []  
-        for (var i = 0; i < 9; i++){
-            for (var j = 0; j < 3; j++){
-                if (products[i].cores[j] == 'vermelho'){
-                    filtrovermelho.push(products[i])
-                }
-            }
-        }
-        
-        clear()
-        render(filtrovermelho)
-    })
-    $( "#preto" ).click(function() {  
-        let filtropreto = []  
-        for (var i = 0; i < 9; i++){
-            for (var j = 0; j < 3; j++){
-                if (products[i].cores[j] == 'preto'){
-                    filtropreto.push(products[i])
-                }
-            }
-        }
-        
-        clear()
-        render(filtropreto)
-    })
-    $( "#rosa" ).click(function() {  
-        let filtrorosa = []  
-        for (var i = 0; i < 9; i++){
-            for (var j = 0; j < 3; j++){
-                if (products[i].cores[j] == 'rosa'){
-                    filtrorosa.push(products[i])
-                }
-            }
-        }
-        
-        clear()
-        render(filtrorosa)
-    })
-    $( "#vinho" ).click(function() {  
-        let filtrovinho = []  
-        for (var i = 0; i < 9; i++){
-            for (var j = 0; j < 3; j++){
-                if (products[i].cores[j] == 'vinho'){
-                    filtrovinho.push(products[i])
-                }
-            }
-        }
-        
-        clear()
-        render(filtrovinho)
-    })
+        });
+    });
+
 })();
