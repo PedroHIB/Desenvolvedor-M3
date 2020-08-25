@@ -5,7 +5,7 @@
     "divisao":3,
     "cores": ["cinza"],
     "tamanhos": ["p", "m", "g"],
-    "imagem": 2
+    "imagem": "2"
     },{
     "nome": "SAIA EM COURO",
     "valor": 398.00,

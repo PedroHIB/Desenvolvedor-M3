@@ -15,7 +15,7 @@
 
             productContainer.innerHTML = `
             <div name="imagem" id="imagem">
-                <img src="layout/imagens/img_${product.imagem}.png" />
+                <img src="./layout/imagens/img_${product.imagem}.png" />
             </div>
             <div class="item" name="item" id="item" style="text-aling: center;">
                 <p style="text-align-center">

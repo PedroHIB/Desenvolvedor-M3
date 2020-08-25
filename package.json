@@ -1,0 +1,24 @@
+{
+  "name": "Desenvolvedor-M3",
+  "version": "1.0.0",
+  "description": "pedrohizib@gmail.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/http-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedroHIB/Desenvolvedor-M3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PedroHIB/Desenvolvedor-M3/issues"
+  },
+  "homepage": "https://github.com/PedroHIB/Desenvolvedor-M3#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
