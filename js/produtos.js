@@ -127,4 +127,94 @@
         });
     });
 
+
+
+    /*Filtro de Preços*/
+    var preco
+    function acrescentarPreco(tam){
+        for (var i = 0; i < 9; i++){            
+                if (products[i].valor == preco){
+                    filtroPreco.push(products[i])
+                    filtroPreco = filtroPreco.filter(function (a) {
+                        return !this[JSON.stringify(a)] && (this[JSON.stringify(a)] = true);
+                    },
+                    Object.create(null))
+                }
+            }
+        }
+    $(document).ready(function(){
+        $(".secprecos").find("input[type='checkbox']").click(function(){
+           preco = $(this).attr("id");
+           acrescentarPreco(preco)
+            
+            switch (preco) {
+                case 'faixa1':
+
+                var filtroPreco = products.filter(function (item) {
+                    return item.valor < 50
+                })
+
+                if (document.querySelector('#faixa1').checked) {
+                    clear()
+                    render(filtroPreco)
+                } else {
+                    clear()
+                    render(products)
+                }
+                break;
+                case 'faixa2':
+                
+                var filtroPreco = products.filter(function (item) {
+                    return (item.valor > 51) && (item.valor < 150)
+                })
+                if (document.querySelector('#faixa2').checked) {
+                    clear()
+                    render(filtroPreco)
+                } else {
+                    clear()
+                    render(products)
+                }
+                break;
+                case 'faixa3':
+                var filtroPreco = products.filter(function (item) {
+                    return (item.valor > 151) && (item.valor < 300)
+                })
+                if (document.querySelector('#faixa3').checked) {
+                    clear()
+                    render(filtroPreco)
+                } else {
+                    clear()
+                    render(products)
+                }
+                break;
+                case 'faixa4':
+                var filtroPreco = products.filter(function (item) {
+                    return (item.valor > 301) && (item.valor < 500)
+                })
+                if (document.querySelector('#faixa4').checked) {
+                    clear()
+                    render(filtroPreco)
+                } else {
+                    clear()
+                    render(products)
+                }
+                break;
+                case 'faixa5':
+                                var filtroPreco = products.filter(function (item) {
+                    return item.valor > 1
+                })
+                if (document.querySelector('#faixa5').checked) {
+                    clear()
+                    render(filtroPreco)
+                } else {
+                    clear()
+                    render(products)
+                }
+                break;
+            }
+
+        });
+    });
+
+
 })();
